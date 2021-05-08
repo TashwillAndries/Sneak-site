@@ -1,0 +1,259 @@
+<!-- 
+    SNEAKER STORE PROJECT
+
+    You are tasked to replicate the following site: https://megaone.acrothemes.com/index-product-hotspot.html
+
+    Most of the HTML structure has been set up for you, however you will have to go through the document to
+    fill in the missing HTML elements and classes. I have also included the background, and 2 images for you.
+
+    If you would like to edit settings of either Owl Carousel or FullPage.js, you will need to edit the settings
+    in the scripts.js file.
+****
+    Owl Carousel Options:
+    https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html
+
+    FullPage.js Options:
+    https://github.com/alvarotrigo/fullPage.js#options
+
+    I have also linked and initialized Animate On Scroll (AOS). You will need to go through the documentation
+    to apply the correct attributes to get the desired outcome.
+
+    AOS Documentation:
+    https://michalsnik.github.io/aos/
+
+    You will also have to link in your own FontAwesome kits. I have marked the area for this script with a comment
+
+    FontAwesome Icons:
+    https://fontawesome.com/icons?d=gallery&p=2&m=free
+
+    THE DEADLINE FOR THE PROJECT IS FRIDAY 7 MAY
+
+    Goodluck and have fun!
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneaker Store</title>
+    <script src="https://kit.fontawesome.com/fac4728399.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- 3rd Party CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css" integrity="sha512-RVmrWua3k1yTDEOg4Yzs2bK5+Thh7nM6jrhDq/6/5/Mwa0JbYe4pP4YMK5sqghKz01T3DgrwYc57Jaf1PSurCg==" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <nav class="icons">
+        <div class="icon-group">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </nav>
+    <div id="fullpage">
+        <div class="section" data-aos="fade-down">
+            <!-- Add classes where necessary and style the section appropriately -->
+            <div id="homePage" class="content">
+                <div class="home-details">
+                    <h1 class="home-heading">
+                        <span class="premium">Premium</span
+              ><span class="air">Air Max Sneakers</span>
+                    </h1>
+                    <p>
+                        Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the industry’s standard dummy.
+                    </p>
+                    <a href="#products" class="btn-1">View More</a>
+                </div>
+                <img src="./images/images/pngegg(4).png" alt="Sneaker" class="sneaker-1" data-tilt />
+            </div>
+        </div>
+        <div class="section">
+            <!-- Add classes where necessary and style the section appropriately -->
+            <div id="productPage" class="content">
+                <header class="product-page-header-container">
+                    <div class="title-font">
+                        <h2 class="page-heading">Premium</h2>
+                        <h3 class="page-subtitle">Shoe Collection</h3>
+                    </div>
+                    <div class="number-stats">
+                        <div class="stat-group"><span>18</span> Shoes Delivered</div>
+                        <div class="stat-group"><span>22</span> New Article</div>
+                        <div class="stat-group"><span>30</span> Happy Customers</div>
+
+                        <!-- Add HTML for the numbers here. They DO NOT have to animate -->
+                    </div>
+                </header>
+                <!-- Product slider, please add your own classes as well to the HTML -->
+                <div id="product-slider" class="owl-carousel">
+                    <!-- Product Item -->
+                    <div class="product">
+                        <img src="./images/images/pngegg(1).png" alt="Sneaker" />
+                        <h3>Nike Jordan</h3>
+                        <button onclick="openModal()">View Detail</button>
+                    </div>
+                    <!-- Product Item -->
+                    <div class="product">
+                        <img src="./images/images/pngegg(2).png" alt="Sneaker" />
+                        <h3>Nike Air Max</h3>
+                        <button onclick="openModal()">View Detail</button>
+                    </div>
+                    <!-- Product Item -->
+                    <div class="product">
+                        <img src="./images/images/pngegg(3).png" alt="Sneaker" />
+                        <h3>Nike free Airforce</h3>
+                        <button onclick="openModal()">View Detail</button>
+                    </div>
+                    <!-- Product Item -->
+                    <div class="product">
+                        <img src="./images/images/pngegg(5).png" alt="Sneaker" />
+                        <h3>Air Jordan</h3>
+                        <button class="open-model" onclick="openModal()">View Detail</button>
+                    </div>
+                </div>
+                <div id="modal">
+                    <div class="model-container">
+                        <div class="model-content">
+                            <img class="model-img" src="./images/images/pngegg(3).png" alt="sneaker" />
+                        </div>
+                        <div class="model-descriptions">
+                            <h2 class="model-heading">Article Z3-250-34</h2>
+                            <h3 class="model-subheading">Nikes</h3>
+                            <p class="description-p">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolor a velit ullam labore iste!
+                            </p>
+                            <div class="sizes">
+                                <div class="sizes-text">
+                                    <p>Size:</p>
+                                </div>
+                                <div class="sizes-numbers">
+                                    <span>38</span>
+                                    <span>39</span>
+                                    <span>40</span>
+                                    <span>41</span>
+                                    <span>42</span>
+                                    <span>43</span>
+                                    <span>44</span>
+                                    <span>45</span>
+
+                                </div>
+                            </div>
+                            <div class="selectors">
+                                <div class="selectors-title">Qty:</div>
+                                <div class="quantity">
+                                    <span>-</span>
+                                    <p>1</p>
+                                    <span class="positive">+</span>
+                                </div>
+                                <div class="color-title">Color:</div>
+                                <div class="colors">
+                                    <span class="C-one"></span>
+                                    <span class="C-two"></span>
+                                    <span class="C-three"></span>
+                                </div>
+
+                            </div>
+                            <div class="price">$200</div>
+                            <div class="buy-btn">
+                                <a href="#">Buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add modal content here. Please pay careful 
+                attention to layout and styling, and please ignore any functionality 
+                eg: switching images on click.
+           
+                *PS* you do not have to create multiple of these, they should all look the same -->
+                    <!-- Button to close modal. Please style appropriately -->
+                    <div class="bottom-img">
+                        <img src="./images/images/pngegg(1).png" alt="">
+                        <img src="./images/images/pngegg(2).png" alt="">
+                        <img src="/./images/images/pngegg(4).png" alt="">
+                    </div>
+                    <button class="close-btn" onclick="openModal()">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="testimonialPage" class="content">
+                <!-- Page header -->
+                <header class="testimonial-page-header-container">
+                    <h2 class="testimonial-page-heading">Best In Business</h2>
+                    <h3 class="testimonial-page-subtitle">Happy Customers</h3>
+                </header>
+                <div id="testimonial-slider" class="owl-carousel">
+                    <!-- The content for the testimonials has been created using JavaScript. 
+                Please go to the inspect tool to see which classes were used to build the slider, 
+                and use the classnames given to style them in your CSS sheet -->
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="contactPage" class="content">
+                <!-- Page header -->
+                <header class="contact-page-header-container">
+                    <h2 class="page-heading">Questions?</h2>
+                    <h3 class="page-subtitle">Let's get in touch</h3>
+                </header>
+                <!-- Contact Details -->
+                <div class="contact-details-container">
+                    <div class="contact-left-right">
+                        <div class="contact-left-side">
+                            <h4 class="contact-details-heading">Warehouse Location</h4>
+                            <p class="contact-details-description">
+                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered .
+                            </p>
+                            <!-- Please insert location, contact numbers and email elements here -->
+                            <div class="locations">
+                                <i class="fas fa-map-marker-alt"><p>123 Park Avenue, New York, United States</p></i
+                >
+
+                <i class="fas fa-phone-volume"> <p>+1 631 1234 5678</p></i>
+
+                                <i class="fas fa-paper-plane"> <p>email@website.com</p></i>
+
+                                <div class="contact-icon-group">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-form">
+                            <form action="https://formspree.io/f/mzbydwpo" method="POST">
+                                <input class="contact-input" type="text" name="full_name" id="full_name" placeholder="Name" required />
+                                <input class="contact-input" type="tel" name="contact_no" id="contact_no" placeholder="Contact No" required />
+                                <input class="contact-input" type="email" name="email" id="email" placeholder="Email" required />
+                                <textarea class="contact-input" name="message" id="message" placeholder="Type your message here"></textarea>
+                                <button class="button" type="submit">Submit Information</button>
+                            </form>
+                            <!-- Create new form on FORMSPREE and insert ULR in the ACTION ATTRIBUTE -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- External Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js" integrity="sha512-HqbDsHIJoZ36Csd7NMupWFxC7e7aX2qm213sX+hirN+yEx/eUNlZrTWPs1dUQDEW4fMVkerv1PfMohR1WdFFJQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.min.js" integrity="sha512-0xW5KFMtT462F65vVvIejNawM1U2Fp/yhItmQVFUwdYP+R9tQFCn4QtLEhkp6RoGovZ6YCvbxy+GVCtGv0+nvA==" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- My Javascript File -->
+        <script src="./scripts.js"></script>
+</body>
+
+</html>
